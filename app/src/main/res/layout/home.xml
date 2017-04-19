@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btnMenu"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_weight="0.24"
+        android:text="Menu" />
+
+    <Button
+        android:id="@+id/btnCaltor"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_weight="0.24"
+        android:text="Calories Calculator" />
+
+    <Button
+        android:id="@+id/btnBlog"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_weight="0.24"
+        android:text="Nutritionist Blog" />
+
+    <Button
+        android:id="@+id/btnQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_weight="0.24"
+        android:text="Nutrition Quiz" />
+
+</LinearLayout>

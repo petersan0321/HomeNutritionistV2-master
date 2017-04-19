@@ -1,0 +1,1070 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Menu_Calculator_Fragment"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        tools:context=".MainActivity_Calculator"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="-35dp"
+            android:layout_marginRight="-40dp"
+            android:src="@drawable/ic_seasoning"
+            android:onClick="clickSeasoning"
+            android:clickable="true"
+            android:id="@+id/seasoning" />
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="-7.5dp"
+            android:layout_marginLeft="-35dp"
+            android:layout_marginRight="-40dp"
+            android:src="@drawable/ic_vegetable"
+            android:clickable="true"
+            android:onClick="clickVegetable"
+            android:id="@+id/vegetable" />
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="-7.5dp"
+            android:layout_marginLeft="-35dp"
+            android:layout_marginRight="-40dp"
+            android:src="@drawable/ic_meat"
+            android:onClick="clickMeat"
+            android:clickable="true"
+            android:id="@+id/meat" />
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="-7.5dp"
+            android:layout_marginLeft="-35dp"
+            android:layout_marginRight="-37.5dp"
+            android:src="@drawable/ic_cereal"
+            android:clickable="true"
+            android:onClick="clickCereal"
+            android:id="@+id/cereal" />
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="-7.5dp"
+            android:layout_marginLeft="-35dp"
+            android:layout_marginRight="-35dp"
+            android:src="@drawable/ic_seafood"
+            android:clickable="true"
+            android:onClick="clickSeafood"
+            android:id="@+id/seafood" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity_Calculator"
+        android:id="@+id/cal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="125dp"
+            android:orientation="vertical"
+            android:background="#fff6f0ff">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:text="   Quantity of ingredient:"
+                    android:id="@+id/textView" />
+
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.6"
+                    android:inputType="numberDecimal"
+                    android:id="@+id/totalGram"
+                    android:maxLength="10"
+                    android:hint="gram" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="  The amount of calories:"
+                    android:id="@+id/textView2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="gram"
+                    android:id="@+id/totalCalories" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="6">
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="checkInput"
+                    android:id="@+id/checkInput"
+                    android:onClick="showAlert"
+                    android:textSize="10dp" />
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Reset"
+                    android:id="@+id/reset"
+                    android:onClick="clickReset"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="10dp" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.6"
+                    android:src="@drawable/ic_green"
+                    android:visibility="invisible"
+                    android:id="@+id/green"
+                    android:clickable="true"
+                    android:onClick="clickGreen" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.6"
+                    android:src="@drawable/ic_yellow"
+                    android:visibility="invisible"
+                    android:id="@+id/yellow"
+                    android:onClick="clickYellow"
+                    android:clickable="true" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.6"
+                    android:src="@drawable/ic_red"
+                    android:visibility="invisible"
+                    android:id="@+id/red"
+                    android:clickable="true"
+                    android:baselineAlignBottom="false"
+                    android:onClick="clickRed" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/layoutWithScroll">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <EditText
+                        android:layout_width="100dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/nameOfOtherFood"
+                        android:maxLength="30"
+                        android:hint="Name of dish/ingredient"
+                        android:textSize="10dp" />
+
+                    <EditText
+                        android:layout_width="100dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:inputType="numberDecimal"
+                        android:id="@+id/caloriesOfOtherFood"
+                        android:maxLength="10"
+                        android:hint="Calories of dish/ingredient"
+                        android:textSize="10dp"/>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/other"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.6"
+                    android:onClick="clickOther"
+                    android:text="Others" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#fffffbff"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_sugar"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_sugar2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Sugar"
+                        android:id="@+id/sugar"
+                        android:layout_gravity="right"
+                        android:onClick="clickSugar" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#fffffbff"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_oil"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_oil2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Oil"
+                        android:id="@+id/oil"
+                        android:layout_gravity="right"
+                        android:onClick="clickOil" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#fffffbff"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_pepper"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_pepper2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Pepper"
+                        android:id="@+id/pepper"
+                        android:layout_gravity="right"
+                        android:onClick="clickPepper" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#fffffbff"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_oregano"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_oregano2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Oregano"
+                        android:id="@+id/oregano"
+                        android:layout_gravity="right"
+                        android:onClick="clickOregano" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#ffe0ffd6"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_mushroom"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_mushroom2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Mushroom"
+                        android:id="@+id/mushroom"
+                        android:layout_gravity="right"
+                        android:onClick="clickMushroom"
+                        android:textSize="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#ffe0ffd6"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_apple"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_apple2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Apple"
+                        android:id="@+id/apple"
+                        android:layout_gravity="right"
+                        android:onClick="clickApple" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#ffe0ffd6"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_banana"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_banana2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Banana"
+                        android:id="@+id/banana"
+                        android:layout_gravity="right"
+                        android:onClick="clickBanana" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#ffe0ffd6"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_orange"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_orange2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Orange"
+                        android:id="@+id/orange"
+                        android:layout_gravity="right"
+                        android:onClick="clickOrange" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#ffe0ffd6"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_pineapple"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_pineapple2"/>
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Pineapple"
+                        android:id="@+id/pineapple"
+                        android:layout_gravity="right"
+                        android:onClick="clickPineapple" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#ffe0ffd6"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_onion"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_onion2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Onion"
+                        android:id="@+id/onion"
+                        android:layout_gravity="right"
+                        android:onClick="clickOnion" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#ffffd5d0">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_beef"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_beef2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Beef"
+                        android:id="@+id/beef"
+                        android:layout_gravity="right"
+                        android:onClick="clickBeef" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#ffffd5d0"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_pork"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_pork2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Pork"
+                        android:id="@+id/pork"
+                        android:layout_gravity="right"
+                        android:onClick="clickPork" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#ffffd5d0"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_lamb"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_lamb2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Lamb"
+                        android:id="@+id/lamb"
+                        android:layout_gravity="right"
+                        android:onClick="clickLamb" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#ffffd5d0"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_duck"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_duck2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Duck"
+                        android:id="@+id/duck"
+                        android:layout_gravity="right"
+                        android:onClick="clickDuck" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#ffffd5d0"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_chicken"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_chicken2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Chicken"
+                        android:id="@+id/chicken"
+                        android:layout_gravity="right"
+                        android:onClick="clickChicken" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#fffffdda"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_rice"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_rice2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Rice"
+                        android:id="@+id/rice"
+                        android:layout_gravity="right"
+                        android:onClick="clickRice" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#fffffdda"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_noodle"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_noodle2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Noodle"
+                        android:id="@+id/noodle"
+                        android:layout_gravity="right"
+                        android:onClick="clickNoodle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#fffffdda"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_corn"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_corn2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Corn"
+                        android:id="@+id/corn"
+                        android:layout_gravity="right"
+                        android:onClick="clickCorn" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#fffffdda"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_bread"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_bread2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Bread"
+                        android:id="@+id/bread"
+                        android:layout_gravity="right"
+                        android:onClick="clickBread" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#fffffdda"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_oat"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_oat2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Oats"
+                        android:id="@+id/oat"
+                        android:layout_gravity="right"
+                        android:onClick="clickOat" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#ffe3ecff">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_fish2"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_fish2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Sea fish"
+                        android:id="@+id/fish"
+                        android:layout_gravity="right"
+                        android:onClick="clickFish" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#ffe3ecff"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_salmon"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_salmon2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Salmon"
+                        android:id="@+id/salmon"
+                        android:layout_gravity="right"
+                        android:onClick="clickSalmon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#ffe3ecff"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_catfish"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_catfish2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Catfish"
+                        android:id="@+id/catfish"
+                        android:layout_gravity="right"
+                        android:onClick="clickCatfish" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#ffe3ecff"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_cuttlefish2"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_cuttlefish2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Cuttlefish"
+                        android:id="@+id/cuttlefish"
+                        android:layout_gravity="right"
+                        android:onClick="clickCuttlefish"
+                        android:textSize="10dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#ffe3ecff"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_squid"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_squid2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Squid"
+                        android:id="@+id/squid"
+                        android:layout_gravity="right"
+                        android:onClick="clickSquid" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#ffe3ecff"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_shrimp"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_shrimp2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Shrimp"
+                        android:id="@+id/shrimp"
+                        android:layout_gravity="right"
+                        android:onClick="clickShrimp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#ffe3ecff"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_crab"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_crab2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Crab"
+                        android:id="@+id/crab"
+                        android:layout_gravity="right"
+                        android:onClick="clickCrab" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal"
+                    android:background="#ffe3ecff"
+                    android:weightSum="3">
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:src="@drawable/ic_shellfish"/>
+
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="0.8"
+                        android:layout_marginLeft="-11dp"
+                        android:src="@drawable/ic_shellfish2"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.2"
+                        android:text="Shellfish"
+                        android:id="@+id/shellfish"
+                        android:layout_gravity="right"
+                        android:onClick="clickShellfish" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

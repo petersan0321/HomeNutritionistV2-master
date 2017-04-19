@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nutritionist Blog"
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="81dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="284dp"
+        app:srcCompat="@drawable/nutrition"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="-105dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="341dp"
+        android:layout_height="178dp"
+        android:layout_gravity="fill_vertical"
+        android:layout_margin="4dp"
+        android:text="In recent years, the low fat diet trend has lost a lot of steam. These days, many health authorities no longer recommend restricting dietary fat indiscriminately. Having said that, there is still a fair share of disagreement about what exactly constitutes healthy lipid sources. Just about everyone agrees that hydrogenated fats (aka trans-fats) are harmful. Likewise, most nutritional experts recommend seeking out omega-3 fatty acids such as those found in cold water fish, grass fed meat and select seeds, including flax, hemp and chia. On the other hand, saturated fats and vegetable oils tend to fall into the “questionable” category."
+        android:textSize="13dp" />
+
+</LinearLayout>
